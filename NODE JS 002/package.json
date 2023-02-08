@@ -1,0 +1,7 @@
+{"type": "module",
+  "dependencies": {
+    
+    "chalk": "^5.2.0",
+    "nodemon": "^2.0.20"
+  }
+}

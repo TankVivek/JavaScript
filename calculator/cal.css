@@ -1,0 +1,31 @@
+html,body 
+{
+    height: 100%;
+    width: 100%;
+}
+button
+{
+    padding: 15px;
+    margin: 5 5px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 9px;
+    cursor: pointer;
+    width: 50px;
+}
+.row 
+{
+    margin: 8px 0;
+}
+.row input {
+    margin: 0px;    
+    padding: 15px 35px 15px 35px;
+    border: 2px solid;
+    border-radius: 9px;
+}
+/* .container
+{
+    background-image: linear-gradient( to left , rgb(255, 255, 255) ,rgb(41, 41, 41));
+} */
+body{
+    background-image: linear-gradient( to left , rgb(209, 207, 207) ,rgb(41, 41, 41));
+}
