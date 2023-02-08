@@ -13,10 +13,7 @@ const path = require("path");
 const { command } = require("yargs");
 const yargs = require("yargs")
 
-
-
-
-    
+   
     yargs.command({
 
     command: "add",
@@ -31,31 +28,6 @@ const yargs = require("yargs")
         process.exit(1);
     
     }})
-
-
-
-    //   REMOVE
-
-
-    
-    yargs.command({
-
-    command: "remove",
-    builder: {
-        remove: {
-
-            type:fs.rmdirSync("New a Folder"),
-            
-        }
-    },
-    handler: function (argv) {
-        
-        console.log("remove a New Folder Successfully");
-        process.exit(1);
-
-    }})
-
-
 
 yargs.argv
 
