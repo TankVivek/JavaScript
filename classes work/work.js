@@ -1,7 +1,7 @@
 
-     <!-- app.js -->
+    //  <!-- app.js -->
 
-<!-- //console.log("testing....")
+ //console.log("testing....")
 
 //variables 
 
@@ -198,4 +198,4 @@ var a = [10, 20, 30, 40, 50, 60, 30, "abc"];
 
 
 
- -->
+ 

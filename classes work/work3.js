@@ -1,11 +1,11 @@
 
 
-                     <!-- myjs.js -->
+                    //  <!-- myjs.js -->
 
                      
 
 
-<!-- 
+
 function change() {
     document.getElementsByTagName("h1")[0].style.backgroundColor = "yellow"
     document.getElementsByTagName("h1")[0].style.color = "red"
@@ -47,4 +47,4 @@ function validation() {
         lnamee.innerHTML = ""
     }
 
-} -->
+} 
