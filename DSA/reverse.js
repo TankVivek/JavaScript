@@ -1,6 +1,8 @@
   
             // Reverse Array
 
+const { array } = require("yargs")
+
 // const reverseArray = (Arry,start,end) => 
 // {
 //     while(start< end)
@@ -36,6 +38,7 @@
 
             // Second Mathod.
 
+
             // const arr=[2,3,4,5,6,7,8,12]
             
             // let start=0
@@ -56,7 +59,7 @@
 
             
             
-              // Third Method
+                // Third Method
 
 
 
@@ -66,3 +69,20 @@
             // arr.reverse()
 
             // console.log(arr)
+
+            
+            // Fourth Method
+            
+            let a = [1,2,2,4,5,6]
+            
+            let newArry = []
+                
+            for(let i=a.length-1;i>=0;i--){
+              
+              newArry+=a[i]
+              newArry;
+              newArry
+
+            }
+            
+            console.log(newArry)
