@@ -1,7 +1,7 @@
 
 
 const yargs = require ("yargs")
-const file = require("") 
+const file = require("./newFile") 
 const { string } = require("yargs")
 
 yargs.command({
