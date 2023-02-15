@@ -4,7 +4,7 @@ const port = 9000;
 const path = require("path")
 
 app.get("/", (req, resp) => {
-    resp.send("main req. calling....")
+    resp.send("sever is calling....")
 })
 
 app.get("/home", (req, resp) => {
@@ -13,7 +13,8 @@ app.get("/home", (req, resp) => {
 })
 
 app.get("/about", (req, resp) => {
-    resp.send("about calling")
+    // resp.send("about calling")
+    resp.sendFile(path.join(__dirname,("about.html")))
 })
 
 app.get("*", (req, resp) => {
