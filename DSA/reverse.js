@@ -3,7 +3,7 @@
 
 
 //      const reverseArray = (Arry,start,end) => 
-//      {
+//                           {
 //      while(start< end)
 //      {
 //         var tamp = Arry [start];
