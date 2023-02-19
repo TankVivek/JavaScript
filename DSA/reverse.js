@@ -72,15 +72,27 @@
             
             // Fourth Method
             
-            let a = [1,2,2,4,5,6]
+            // let a = [1,2,2,4,5,6]
             
-            let newArry = []
+            // let newArry1 = []
                 
-            for(let i=a.length-1;i>=0;i--){
+            // for(let i=a.length-1;i>=0;i--){
               
-              newArry+=a[i]
-              newArry;
+            //   newArry1+=a[i]
+            //   newArry1;
 
+            // }
+            
+            // console.log(newArry1)
+
+            // firth  mathod in 
+
+            let a = [1, 2, 2, 4, 5, 6];
+            
+            let newArry1 = [];
+            
+            for (let i = a.length - 1; i >= 0; i--) {
+              newArry1.push(a[i]);
             }
             
-            console.log(newArry)
+            console.log(newArry1);
