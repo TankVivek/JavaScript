@@ -80,7 +80,6 @@
               
               newArry+=a[i]
               newArry;
-              newArry
 
             }
             
