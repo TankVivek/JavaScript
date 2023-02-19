@@ -7,6 +7,8 @@ const hbs = require ("hbs")
 const path = require ("path")
 const port = 9005;
 
+
+
 app.get("/",(req,resp)=>{
     resp.render("index",{user:"vivek"})
 })
