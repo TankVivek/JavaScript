@@ -17,16 +17,17 @@ app.set("views", viewpath)
 hbs.registerPartial(partialpath)
 app.use(express.static(puclicpath))
 
-app.get("/",(req,resp)=>{
-    resp.render("index",{user:"vivek"})
-})
+// `app.get("/",(req,resp)=>{
+//     resp.render("index",{user:"vivek"})
+// })`
 
-app.get("/myweather",(req,resp)=>{
+ app.get("/weather",(req,resp)=>{
     resp.render("weather")
-})
-app.get("/about",(req,resp)=>{
-    resp.render("about")
-})
+  })
+// app.get("/about",(req,resp)=>{
+//     resp.render("about")
+// })
+
 
 app.get("/weather",(req,resp)=>
 {

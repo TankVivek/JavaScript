@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    {{>header}}
+
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-8 col-lg-6 col-xl-4">
+
+                    <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3>
+
+                    <div class="input-group rounded mb-3">
+                        <input type="search" class="form-control rounded" placeholder="City" aria-label="Search"
+                            aria-describedby="search-addon" id="cityname" />
+                        <a href="#!" type="button">
+                            <span class="input-group-text border-0 fw-bold" id="search-addon" onclick="getWeather()">
+                                Check!
+                            </span>
+                        </a>
+                    </div>
+
+
+
+                    <div class="card shadow-0 border">
+                        <div class="card-body p-4">
+
+                            <h4 class="mb-1 sfw-normal" id="city">New York, US</h4>
+                            <p class="mb-2">Current temperature: <strong id="temp">5.42°C</strong></p>
+                            <p>Pressure: <strong id="pressure">4.37°C</strong></p>
+                            <p>Humidity: <strong id="humidity">4.37°C</strong></p>
+                            <p>lat: <strong id="lat">6.11</strong>, lng: <strong id="lng">3.89</strong></p>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/demo.js"></script>
+</body>
+
+</html>
