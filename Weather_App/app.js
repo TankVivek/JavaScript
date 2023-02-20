@@ -2,8 +2,8 @@
 
 const express = require ("express")
 const app = express();
-// const weather = require("./util/weather")
-// const geocode = require("./util/geocode")
+const weather = require("./utill/weather")
+const geocode = require("./utill/geocode")
 const hbs = require ("hbs")
 const path = require ("path")
 const port = 9005;
@@ -13,7 +13,7 @@ const partialpath = path.join(__dirname,"./tamplate/partials")
 const puclicpath = path.join(__dirname,"./public")
 
 app.set("view engine", "hbs")
-app.set("view", viewpath)
+app.set("views", viewpath)
 hbs.registerPartial(partialpath)
 app.use(express.static(puclicpath))
 
@@ -32,9 +32,9 @@ app.get("/weather",(req,resp)=>
 {
     const localtion = req.query.localtion
 
-    geocode.getgeocode(localtion).then
+    geocode.getGeocode(localtion).then
     (result => {
-        return weather.getweather
+        return weather.getWeather
         (result.lat,result.lng)
     }).then(data => {
         resp.send(data)
