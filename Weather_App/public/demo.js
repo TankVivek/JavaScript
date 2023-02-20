@@ -1,3 +1,6 @@
+
+
+
 const getWeather = () => {
 
     const location = document.getElementById("cityname").value
@@ -16,7 +19,4 @@ const getWeather = () => {
 
     }).catch(err => {
         console.log(err);
-    })
-
-
-}
+    })}

@@ -30,9 +30,9 @@ app.get("/about",(req,resp)=>{
 
 app.get("/weather",(req,resp)=>
 {
-    const localtion = req.query.localtion
+    const location = req.query.localtion
 
-    geocode.getGeocode(localtion).then
+    geocode.getGeocode(location).then
     (result => {
         return weather.getWeather
         (result.lat,result.lng)
