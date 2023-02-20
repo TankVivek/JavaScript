@@ -35,9 +35,12 @@ app.get("/weather",(req,resp)=>
     (result => {
         return weather.getweather
         (result.lat,result.lng)
-    }).then(DATA => {
-        D
-    })
+    }).then(data => {
+        resp.send(data)
+    
+   }).catch(err => {
+    console.log(err);
+   })
 })
 
 
