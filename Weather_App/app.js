@@ -14,10 +14,31 @@ const puclicpath = path.join(__dirname,"./public")
 app.set("view engine", "hbs")
 app.set("view", viewpath)
 hbs.registerPartial(partialpath)
-app.use(express.static(partialpath))
+app.use(express.static(puclicpath))
 
 app.get("/",(req,resp)=>{
     resp.render("index",{user:"vivek"})
 })
+
+app.get("/myweather",(req,resp)=>{
+    resp.render("weather")
+})
+app.get("/about",(req,resp)=>{
+    resp.render("about")
+})
+
+app.get("/weather",(req,resp)=>
+{
+    const localtion = req.query.localtion
+
+    geocode.getgeocode(localtion).then
+    (result => {
+        return weather.getweather
+        (result.lat,result.lng)
+    }).then(DATA => {
+        D
+    })
+})
+
 
 app.listen(port,()=>{ console.log("server is runnign" +port);})
