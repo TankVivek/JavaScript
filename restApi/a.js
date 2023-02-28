@@ -26,7 +26,7 @@ var url = "mongodb://127.0.0.1:27017/student";
 
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
-  var dbo = db.db("mydb");
+  var dbo = db.db("student");
   var myobj = [
     { name: 'John', address: 'Highway 71'},
     { name: 'Peter', address: 'Lowstreet 4'},
