@@ -1,4 +1,6 @@
 
+
+
 // const express = require("express")
 // const app = require("express")
 const mongoose = require("mongoose")
@@ -13,8 +15,8 @@ mongoose.connect(durl).then(()=>{
     console.log(err);
 })
 
-const userschema = new  mongoose.Schema 
-({
+ const userschema = new  mongoose.Schema 
+ ({
     name:{type:String},
     email:{ type:String,
             unique:true,
