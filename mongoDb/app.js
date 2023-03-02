@@ -16,9 +16,9 @@ MongoClient.connect(DBurl).then(result=>
     //     console.log("data Created");
     // })
     
-const em1 = { name : "vivek" , email : "vivektank@gmail.com" }
-const em2 = { name : "rutvik" , email : "rutvik@gmail.com" }
-const em3 = { name : "jay" , email : "jay@gmail.com" }
+const em1 = {_id:1, name : "jaydeep" , email : "jaydeep@gmail.com" }
+const em2 = {_id:2, name : "chintan" , email : "chinatn@gmail.com" }
+const em3 = {_id:3, name : "sanket" , email : "sanket@gmail.com" }
 
 myDB.collection("emp").insertMany([em1,em2,em3]).then(result => {
     console.log(result);}).catch(err => {
