@@ -44,7 +44,7 @@ app.get("/users", (req, resp) => {
 
 })
 
-app.post("/us", (req,resp) => {
+app.post("/users", (req,resp) => {
 
     const user = new User(req.body)
     user.save().then(data =>{
