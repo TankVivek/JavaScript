@@ -1,19 +1,35 @@
-
-
-
 const mongodb = require("mongodb")
 const MongoClient = mongodb.MongoClient
 
-const dburl = "mongodb://127.0.0.1:27017/";
-const database = "bank"
+const DBurl = "mongodb://127.0.0.1:27017/"
+const databse = "new_bank"
+MongoClient.connect(DBurl).then(result=> 
+{
+    
+    console.log("db connect");
 
-MongoClient.connect(dburl).then(result => { console.log("db connect");
+    const myDB = result.db(databse)
+    myDB.createCollection("new account").then(data => {
+
+        console.log("data Created");
+    })
+
+}).catch(err => {console.log(err);})
 
 
-const mydb = result.db(database)
+// const mongodb = require("mongodb")
+// const MongoClient = mongodb.MongoClient
+
+// const dburl = "mongodb://127.0.0.1:27017/";
+// const database = "bank"
+
+// MongoClient.connect(dburl).then(result => { console.log("db connect");
 
 
-mydb.createCollection("Account").then(data => { console.log("collections crated");})}).catch(err => {console.log(err);})
+// const mydb = result.db(database)
+
+
+// mydb.createCollection("Account").then(data => { console.log("collections crated");})}).catch(err => {console.log(err);})
 
 
 // const em1 = { name : "vivek" , email : "vivektank@gmail.com" }
