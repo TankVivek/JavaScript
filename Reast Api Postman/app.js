@@ -67,6 +67,13 @@ app.patch("/users/:id", (req,resp) => {
     })
 })
 
+app.delete("/users/:id", (req,resp) => {
+    const _id = req.params.id
+    User.findByIdAndDelete(_id, req.body).then(data => {
+        resp.send(data)
+    }).catch(err => { resp.send(err)})
+})
+
 app.listen(port, () => {
     console.log("sevser running" + port);
 })
