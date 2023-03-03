@@ -53,6 +53,10 @@ app.post("/users", (req,resp) => {
         resp.send(err)
     })
 })
+app.put("/users/:id",(req,resp) => {
+    const us = new User.Param._id
+    us.findByIdAndUpdate
+})
 
 app.listen(port, () => {
     console.log("sevser running" + port);
