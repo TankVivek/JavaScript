@@ -13,8 +13,6 @@ mongoose.connect(dburl).then(result => {
 }).catch(err => {console.log(err);})
 
 
-
-
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
