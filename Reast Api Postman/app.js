@@ -54,7 +54,7 @@ app.post("/users", (req,resp) => {
     })
 })
 app.put("/users/:id",(req,resp) => {
-    const _id = new req.params.id
+    const _id = req.params.id
     User.findByIdAndUpdate(_id,req.body).then(data => {
         resp.send(data)
     }).catch(err => { resp.send(err)})
