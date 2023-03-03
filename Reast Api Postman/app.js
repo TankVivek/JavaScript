@@ -54,8 +54,10 @@ app.post("/users", (req,resp) => {
     })
 })
 app.put("/users/:id",(req,resp) => {
-    const us = new User.Param._id
-    us.findByIdAndUpdate
+    const _id = new req.params.id
+    User.findByIdAndUpdate(_id,req.body).then(data => {
+        resp.send(data)
+    }).catch(err => { resp.send(err)})
 })
 
 app.listen(port, () => {
