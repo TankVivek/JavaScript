@@ -12,7 +12,7 @@ mongoose.connect(url).then(result => { console.log("db connect");}).catch(err =>
 
     // const newSchema = new mongoose.Schema( {
 
-    // name:{
+    // name:{       
     //     type:String
     // },
     // email:{
