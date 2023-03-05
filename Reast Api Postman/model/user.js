@@ -3,10 +3,10 @@ const mongoose = require("mongoose")
 
 const newSchema = new mongoose.Schema( {
 
-    uname:{
+    name:{
         type:String
     },
-    uemail:{
+    email:{
         type:String
     },
     _id:Number
