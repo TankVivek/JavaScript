@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../model/user");
 
-router.get("/view", (req, resp) => {
+router.get("/users/view", (req, resp) => {
   User.find()
     .then((data) => {
       resp.send(data);
@@ -12,7 +12,7 @@ router.get("/view", (req, resp) => {
     });
 });
 
-router.post("/add", (req, resp) => {
+router.post("/users/add", (req, resp) => {
   const us = new User(req.body);
   us.save()
     .then((data) => {
@@ -23,7 +23,7 @@ router.post("/add", (req, resp) => {
     });
 });
 
-router.put("/update/:id", (req, resp) => {
+router.put("/users/update/:id", (req, resp) => {
   const _id = req.params.id;
   User.findByIdAndUpdate(_id, req.body)
     .then((data) => {
@@ -34,7 +34,7 @@ router.put("/update/:id", (req, resp) => {
     });
 });
 
-router.patch("/update/:id", (req, resp) => {
+router.patch("/users/update/:id", (req, resp) => {
   const _id = req.params.id;
   User.findByIdAndUpdate(_id, req.body)
     .then((data) => {
@@ -44,7 +44,7 @@ router.patch("/update/:id", (req, resp) => {
       resp.send(err);
     });
 });
-router.delete("/delete/:id", (req, resp) => {
+router.delete("/users/delete/:id", (req, resp) => {
   const _id = req.params.id;
   User.findByIdAndDelete(_id, req.body)
     .then((data) => {

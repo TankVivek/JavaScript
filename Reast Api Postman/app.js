@@ -74,8 +74,8 @@ mongoose
 
 const userrouter = require("./router/userrouter");
 const productroutr = require("./router/productrouter");
-app.use("/users", userrouter);
-app.use("/product", productroutr);
+app.use("/", userrouter);
+app.use("/", productroutr);
 
 app.listen(port, () => {
   console.log("sever is runng");
