@@ -7,6 +7,9 @@ const newSchema = new mongoose.Schema({
   email: {
     type: String,
   },
+  pass: {
+    type: String,
+  },
   _id: Number,
 });
 

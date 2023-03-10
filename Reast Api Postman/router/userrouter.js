@@ -55,4 +55,24 @@ router.delete("/users/delete/:id", (req, resp) => {
     });
 });
 
+router.post("/userlogin", async (req, resp) => {
+  try {
+    const email = req.body.email;
+    const pass = req.body.pass;
+    const userdata = await User.findOne({ email: email });
+    const valid = await bcrypt.compare(pass, userdata.pass);
+    if (valid) {
+      const token = await jwt.sign(
+        { _id: userdata._id },
+        "thisismyloginwebtoken"
+      );
+      resp.send("Token  : " + token);
+    } else {
+      resp.send("Invalid credentials !!!!");
+    }
+  } catch (error) {
+    resp.send("Invalid credentials !!!!");
+  }
+});
+
 module.exports = router;
