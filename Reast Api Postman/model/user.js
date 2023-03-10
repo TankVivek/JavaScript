@@ -1,18 +1,23 @@
+const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
+const newSchema = new mongoose.Schema({
+  name: {
+    type: String,
+  },
+  email: {
+    type: String,
+  },
+  _id: Number,
+});
 
-const mongoose = require("mongoose")
+newSchema.pre("save", async function () {
+  try {
+    if ((this.isModified = "pass")) {
+      this.pass = await bcrypt.hash(this.pass, 10);
+    }
+  } catch (error) {}
+});
 
-const newSchema = new mongoose.Schema( {
+const user = new mongoose.model("user", newSchema);
 
-    name:{
-        type:String
-    },
-    email:{
-        type:String
-    },
-    _id:Number
-
-})
-
-const user = new mongoose.model("user",newSchema)
-
-module.exports = user
+module.exports = user;
