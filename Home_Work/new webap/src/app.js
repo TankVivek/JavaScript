@@ -24,7 +24,7 @@ app.set("views", viewpath);
 hbs.registerPartials(partialpath);
 app.use(express.static(publicpath));
 
-app.use("/", require("../router/userrouter"));
+// app.use("/", require("../router/userrouter"));
 
 app.listen(port, (req, resp) => {
   console.log("port is running :" + port);
