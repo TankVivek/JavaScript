@@ -8,3 +8,7 @@ const auth = require("../middleware/auth");
 const multer = require("multer");
 
 ///*******************************  *********************************///
+
+router.get("/", (req, resp) => {
+  resp.render("");
+});
