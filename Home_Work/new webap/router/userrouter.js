@@ -9,7 +9,7 @@ const multer = require("multer");
 
 ///*******************************  *********************************///
 
-router.get("/registration", (req, resp) => {
+router.get("/", (req, resp) => {
   resp.render("registraion");
 });
 
