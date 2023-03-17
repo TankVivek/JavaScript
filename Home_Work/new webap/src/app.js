@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 3100;
 mongoose = require("mongoose");
 const path = require("path");
 const hbs = require("hbs");
@@ -24,7 +24,7 @@ app.set("views", viewpath);
 hbs.registerPartials(partialpath);
 app.use(express.static(publicpath));
 
-// app.use("/", require("../router/userrouter"));
+app.use("/", require("../router/userrouter"));
 
 app.listen(port, (req, resp) => {
   console.log("port is running :" + port);

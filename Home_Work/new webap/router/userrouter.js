@@ -1,6 +1,6 @@
 const express = require("express");
 const { default: mongoose } = require("mongoose");
-const router = express.router();
+const router = express.Router();
 const User = require("../model/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -9,6 +9,12 @@ const multer = require("multer");
 
 ///*******************************  *********************************///
 
-router.get("/", (req, resp) => {
-  resp.render("");
+router.get("/registration", (req, resp) => {
+  resp.render("registraion");
 });
+
+router.get("/login", (req, resp) => {
+  resp.render("login");
+});
+
+module.exports = router;

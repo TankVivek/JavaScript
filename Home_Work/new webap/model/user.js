@@ -13,8 +13,8 @@ const UserSchema = new mongoose.Schema({
     type: String,
   },
   Created: {
-    type: date,
-    default: date.now(),
+    type: Date,
+    default: Date.now(),
   },
   Tokens: [
     {
@@ -47,4 +47,4 @@ UserSchema.method.generateToken = async function (next) {
   }
 };
 
-module.exports = new mongoose.model("User", userSchema);
+module.exports = new mongoose.model("User", UserSchema);
