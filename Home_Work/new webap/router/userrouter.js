@@ -24,7 +24,9 @@ router.post("/addUser", async (req, resp) => {
       email: req.body.email,
       pass: req.body.pass,
     });
+    console.log("user", user);
     const data = await user.save();
+    console.log("data", data);
     resp.render("registraion", { msg: "registration successfully" });
   } catch (error) {
     console.log(error);

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcyrypt = require("bcryptjs");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const UserSchema = new mongoose.Schema({
@@ -18,7 +18,9 @@ const UserSchema = new mongoose.Schema({
   },
   Tokens: [
     {
-      token: String,
+      token: {
+        type: String,
+      },
     },
   ],
 });
@@ -26,10 +28,10 @@ const UserSchema = new mongoose.Schema({
 UserSchema.pre("save", async function (next) {
   try {
     if (this.isModified("pass")) {
-      this.pass = await bcyrypt.hash(this.pass, 10);
+      this.pass = await bcrypt.hash("this.pass", 10);
     }
   } catch (error) {
-    console.log(error);
+    console.log("bcryptErr :", error);
   }
 });
 
@@ -38,9 +40,9 @@ UserSchema.method.generateToken = async function (next) {
     const Skey = "thisismysecretkeyforlogin";
     const token = await jwt.sign({ _id: this._id }, Skey);
 
-    this.Token = await this.Token.concat({ token: token });
+    this.Tokens = await this.Tokens.concat({ token: token });
     await this.save();
-    return token;
+    // return token;
     next();
   } catch (error) {
     console.log(error);
