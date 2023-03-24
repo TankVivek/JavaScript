@@ -1,8 +1,6 @@
-  
-            // Reverse Array
+// Reverse Array
 
-
-//      const reverseArray = (Arry,start,end) => 
+//      const reverseArray = (Arry,start,end) =>
 //                           {
 //      while(start< end)
 //      {
@@ -11,6 +9,7 @@
 //         Arry[end] =tamp;
 //         start++;
 //         end--;
+
 //     }
 //     }
 
@@ -24,7 +23,7 @@
 //     var Arry = [1,2,3,4,5,5,6];
 //     var n = 7;
 
-//     PrintArray(Arry,n); 
+//     PrintArray(Arry,n);
 
 //     reverseArray(Arry,0,n-1);
 
@@ -32,68 +31,58 @@
 
 //     PrintArray(Arry,n);
 
+// Second Mathod.
 
+// const arr=[2,3,4,5,6,7,8,12]
 
+// let start=0
 
-            // Second Mathod.
+// let end=arr.length - 1
 
+// while(start<end){
 
-            // const arr=[2,3,4,5,6,7,8,12]
-            
-            // let start=0
-            
-            // let end=arr.length - 1
-            
-            // while(start<end){
-                
-            //    [arr[start],arr[end]]=[arr[end],arr[start]];
-                
-            //     start++;
-                
-            //     end--;
-                
-            // }
-            
-            // console.log(arr) 
+//    [arr[start],arr[end]]=[arr[end],arr[start]];
 
-            
-            
-                // Third Method
+//     start++;
 
+//     end--;
 
+// }
 
-            // const arr=[2,3,4,5,6,7,8,12]
+// console.log(arr)
 
-            
-            // arr.reverse()
+// Third Method
 
-            // console.log(arr)
+// const arr=[2,3,4,5,6,7,8,12]
 
-            
-            // Fourth Method
-            
-            // let a = [1,2,2,4,5,6]
-            
-            // let newArry1 = []
-                
-            // for(let i=a.length-1;i>=0;i--){
-              
-            //   newArry1+=a[i]
-            //   newArry1;
+// arr.reverse()
 
-            // }
-            
-            // console.log(newArry1)
+// console.log(arr)
 
-            // firth  mathod in 
+// Fourth Method
 
-            // let a = [1, 2, 2, 4, 5, 6];
-            
-            // let newArry1 = [];
-            
-            // for (let i = a.length - 1; i >= 0; i--)
-            //  {
-            //    newArry1.push(a[i]);
-            //  }
+// let a = [1,2,2,4,5,6]
 
-            // console.log(newArry1);
+// let newArry1 = []
+
+// for(let i=a.length-1;i>=0;i--){
+
+//   newArry1+=a[i]
+//   newArry1;
+
+// }
+
+// console.log(newArry1)
+
+// firth  mathod in
+
+// let a = [1, 2, 2, 4, 5, 6];
+
+// let newArry1 = [];
+
+// for (let i = a.length - 1; i >= 0; i--)
+//  {
+//    newArry1.push(a[i]);
+//  }
+
+// console.log(newArry1);
