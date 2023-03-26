@@ -3,7 +3,9 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const hbs = require("hbs");
-const port = 3100;
+require("dotenv").config();
+
+const port = process.env.port;
 
 const bodyparser = require("body-parser");
 app.use(bodyparser.urlencoded({ extended: true }));
