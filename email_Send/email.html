@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Page</title>
+    <!-- add any CSS stylesheets or other meta information here -->
+</head>
+
+<body>
+    <h1>Contact Us</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="messege" name="message" required></textarea><br><br>
+
+        <button type="button" onclick="sendEmail()">Send</button>
+    </form>
+
+    <!-- add the smtp.js script and your sendEmail() function here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            var name = $("#name").val()
+            var email = $("#email").val()
+            var message = $("#messege").val()
+
+
+            let body = "This is email for you" + "<br>My name :" + name + "<br>Email :" + email + "<br>message :" + message
+
+
+            Email.send({
+
+
+                Host: "smtp.elasticemail.com",
+                Username: "vivektan8@gmail.com",
+                Password: "46B178A03955D653C65695E68D7756678028",
+                To: "tankvive@gmail.com",
+                From: "vivektan8@gmail.com",
+                Subject: "Test email",
+                Body: "This is a test email." + body
+
+
+
+            })
+                .then(message => {
+                    if (message == "OK") {
+                        alert("Massege sent success")
+
+                    }
+                    else {
+                        alert("cant send massege")
+                    }
+                }).catch(error => {
+                    alert(error);
+                });
+        }
+    </script>
+</body>
+
+</html>
