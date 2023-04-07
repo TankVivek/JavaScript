@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Page</title>
+    <!-- add Bootstrap CSS stylesheet and other meta information here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="sendEmail()">Send</button>
+        </form>
+    </div>
+
+    <!-- add the smtp.js script and your sendEmail() function here -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            var name = $("#name").val()
+            var email = $("#email").val()
+            var message = $("#message").val()
+
+            let body = "This is email for you" + "<br>My name :" + name + "<br>Email :" + email + "<br>message :" + message
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "vivektan8@gmail.com",
+                Password: "46B178A03955D653C65695E68D7756678028",
+                To: "tankvive@gmail.com",
+                From: "vivektan8@gmail.com",
+                Subject: "Test email",
+                Body: "This is a test email." + body
+            })
+                .then(message => {
+                    if (message == "OK") {
+                        alert("Message sent successfully!")
+                    }
+                    else {
+                        alert("Unable to send message.")
+                    }
+                }).catch(error => {
+                    alert(error);
+                });
+        }
+    </script>
+
+    <!-- add Bootstrap JS scripts here, if needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
