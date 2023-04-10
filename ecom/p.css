@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+   }
+   h {
+    font-size: 1em;
+    font-weight: bold;
+   }
+   p {
+   font-size: 0.8em;
+    padding-left: 10px;
+    padding-top:0;
+   }
+   p1 {
+    font-size: 1em;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-top: 10px; 
+   padding-bottom: 0;
+   }
+   body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+   }
+   .header {
+    position: sticky;
+    position: -webkit-sticky;
+     width: 100%;
+    z-index: 800;
+   }
+   .top-alert {
+    background-color: rgb(250,242,244);
+    padding: 8px;
+    text-align: center;
+   }
+   .top-alert-text {
+    font-size: 0.6em;
+    text-align: center;
+    justify-content: center;
+    font-weight: 550;
+   }
+   a {
+    color: inherit;
+   }
+   a:hover { 
+   color: blue;
+   }
+   .menu {
+    display: flex;
+    position: relative; 
+    -webkit-box-align: center;
+    align-items: center;
+    height: 48px;
+    z-index: 800;
+    background: rgb(255, 255, 255);
+   }
+   .menu>div {
+    max-width: 1270px;
+    height: inherit;
+    min-width: 40px;
+    margin: 1%;
+    justify-content: center;
+    padding: 0px 4px;
+    font-size: 0.8em;
+   }
+   .menu>div:nth-child(3) {
+    margin: 0 auto;
+    max-width: 130px;
+    min-width: 90px;
+   }
+   .option {
+    display: flex;
+    position: relative; 
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 39px;
+    background-color: white;
+   }
+   .option>div {
+     max-width: 150px;
+    height: inherit;
+    min-width: 40px;
+    margin: 1%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    transition: all .3s ease;
+   }
+   .option>div:hover {
+    background-color: #DDD; 
+    cursor: pointer;
+    border: 1px solid grey;
+   }
+   @media (max-width: 768px) {
+    .option {
+    overflow-x: visible;
+    display: block;
+    text-align: center;
+    /* justify-contet: center; */
+    margin: 0 auto;
+    height: auto;
+   }
+   .option>div {
+    text-align: center;
+    /* justify-contet: center; */
+    margin: 0 auto;
+   }
+   }
+    
+   #icon {
+    height: inherit;
+    width:20px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2%;
+   }
+   #logo {
+    width: 90%;
+    height: 28px;
+    margin-top: 7%;
+   }
+   .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+   .section {
+    border: 1px solid;
+   }
+   @media (max-width: 768px) {
+    .container {
+    grid-template-columns: none;
+   }
+    .text-box {
+    padding-bottom: 10vh;
+   }
+    #grid-pic {
+    max-height: 580px;
+   }
+   }
+   #grid-pic {
+    height: 90vh;
+    width: 100%;
+    transition: .3s ease;
+   }
+   .text-box { 
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15vh;
+   }
+   .shopnow-button {
+    height: 70px;
+    width: 270px;
+    background-color: #121212;
+    color: white;
+    font-size: 1em;
+    font-weight: bold; 
+    border: none; 
+   border-radius: 5px;
+    margin: 0 auto; 
+    position: relative;
+    display: block;
+    transition: all .3s ease;
+   }
+   .shopnow-button:hover {
+    background-color: rgba(0,0,0,0.7);
+    cursor: pointer;
+   }
+   .wrapper {
+    padding: 5px;
+    max-width: 960px;
+    width: 95%;
+    margin: 20px auto;
+   }
+   header {
+    padding: 0 15px;
+   }
+   .wrapper-text-box {
+    width: 90%;
+    margin: 10px;
+    display: inline-block;
+   } 
+   .column {
+    float: left;
+    width: 20%;
+    height: 460px; 
+    margin: 33px;
+    justify-content: center;
+    text-align: center;
+    text-align: left;
+    font-size: 0.8em;
+    background-color: #FAFAFA;
+   }
+   
+   .row:after {
+    content: "";
+    clear: both;
+    display: table;
+   }
+   @media screen and (max-width: 600px) {
+    .column{
+    width:45%;
+    height: 330px;
+    margin-bottom: 5px; 
+    margin-left: 15px;
+    margin-right: 0;
+   }
+   }
+   #row-pic {
+    height: 80%;
+    width: 100%;
+   }
+   
+   
+   .containere {
+    position: relative;
+    height: 550px;
+    width: 1300px;
+    margin: auto;
+}
+.containere img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   
+}
+.containere img.active {
+    opacity: 1;
+}
+
+.bg {
+    background-color: #121212;
+    color: white;
+}
